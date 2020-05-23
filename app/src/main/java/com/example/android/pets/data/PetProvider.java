@@ -148,6 +148,7 @@ public class PetProvider extends ContentProvider {
             default:
                 throw new IllegalArgumentException("Update is not supported for " + uri);
         }
+
     }
     /**
      * Update pets in the database with the given content values. Apply the changes to the rows
@@ -224,7 +225,7 @@ public class PetProvider extends ContentProvider {
             case PETS:
                 rowsDeleted = database.delete(PetContract.PetEntry.TABLE_NAME, selection, selectionArgs);
                 // Delete all rows that match the selection and selection args
-                return database.delete(PetContract.PetEntry.TABLE_NAME, selection, selectionArgs);
+                break;
             case PET_ID:
                 // Delete a single row given by the ID in the URI
                 selection = PetContract.PetEntry._ID + "=?";

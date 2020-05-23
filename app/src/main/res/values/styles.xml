@@ -10,7 +10,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -32,7 +32,7 @@
         <item name="android:layout_weight">1</item>
         <item name="android:paddingTop">16dp</item>
         <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-medium</item>
         <item name="android:textAppearance">?android:textAppearanceSmall</item>
     </style>
 
@@ -48,7 +48,7 @@
     <style name="EditorUnitsStyle">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentEnd" tools:ignore="NewApi">true</item>
         <item name="android:paddingRight">16dp</item>
         <item name="android:paddingTop">16dp</item>
         <item name="android:textAppearance">?android:textAppearanceSmall</item>
